@@ -12,8 +12,8 @@ gsearch_api_key = os.getenv('GSEARCH_API_KEY')
 cse_id = os.getenv('CSE_ID')
 
 
-# Function to get completion from OpenAI GPT-3.5-turbo-1106 model
-def get_completion(prompt, model="gpt-3.5-turbo-1106"):
+# Function to get completion from OpenAI
+def get_completion(prompt, model="gpt-3.5-turbo"):
     chat_completion = client.chat.completions.create(
         messages=[
             {"role": "user", "content": prompt},
@@ -24,7 +24,7 @@ def get_completion(prompt, model="gpt-3.5-turbo-1106"):
 
 
 # Function to perform a Google search using the Custom Search JSON API
-def google_search(query, gsearch_api_key, cse_id):
+def google_search(query):
     base_url = "https://www.googleapis.com/customsearch/v1"
     params = {
         "key": gsearch_api_key,
@@ -41,7 +41,7 @@ def google_search(query, gsearch_api_key, cse_id):
 
 # Function to grab specified number of URLs from a Google search
 def grab_urls(query, num_link=3):
-    search_results = google_search(query, gsearch_api_key, cse_id)
+    search_results = google_search(query)
     urls = []
     if search_results:
         for item in search_results.get("items", []):
