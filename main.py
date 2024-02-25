@@ -5,11 +5,19 @@ st.set_page_config(page_title="CooPA")
 st.title("🌱 CooPA")
 st.caption("Note: This chatbot does not have memory.")
 
+st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
+st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
+
 st.sidebar.info(
     """
     Info: CooPA is a chatbot that uses the OpenAI API to deliver contextually informed answers by aggregating relevant content from Google search based on user queries.
     """
 )
+
+with st.sidebar.expander('**My Other Apps**'):
+    st.caption('[LLM Optimization with RAG](https://lcrags.streamlit.app/)')
+    st.caption('[SpotOn](https://spoton.streamlit.app/)')
+    st.caption('[Qdoc](https://qdocst.streamlit.app/)')
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Hi! Ask me anything!"}]
