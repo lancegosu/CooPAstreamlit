@@ -11,6 +11,7 @@ st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/
 st.sidebar.info(
     """
     Info: CooPA is a chatbot that uses the OpenAI API to deliver contextually informed answers by aggregating relevant content from Google search based on user queries.
+    Start by asking anything to the chatbot!
     """
 )
 
