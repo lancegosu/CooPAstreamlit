@@ -7,7 +7,7 @@ st.caption("Note: This chatbot does not have memory.")
 
 st.sidebar.info(
     """
-    Info: CooPA is a web application that leverages OpenAI's ChatGPT API and the Google Custom Search API to deliver contextually informed answers by aggregating relevant content from online articles based on user queries.
+    Info: CooPA is a chatbot that uses the OpenAI API to deliver contextually informed answers by aggregating relevant content from Google search based on user queries.
     """
 )
 
